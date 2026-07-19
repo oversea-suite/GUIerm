@@ -6,6 +6,8 @@ import shlex
 import subprocess
 import importlib
 
+app = QtWidgets.QApplication(sys.argv)
+
 # config stuff
 EXAMPLE_CONFIG="""#!/bin/false
 # Example configuration.
@@ -29,7 +31,7 @@ spec = importlib.util.spec_from_file_location("config", os.path.expanduser('~/.c
 config = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(config)
 if config.GERM_DISABLED:
-  QMessageBox.critical(None, "Config Error", "Please edit ~/.config/germ.conf.py and retry.")
+  QtWidgets.QMessageBox.critical(None, "Config Error", "Please edit ~/.config/germ.conf.py and retry.")
   sys.exit(1)
 
 def parse(output):
@@ -120,8 +122,6 @@ class MainWindow(QtWidgets.QMainWindow):
     self.ui.label_CONTAIN_PROC_RAM_5.setText(out['proc_ram_5'].partition(':')[2]+"%")
 
 
-
-app = QtWidgets.QApplication(sys.argv)
 
 my_mainWindow = MainWindow()
 my_mainWindow.show()
