@@ -88,7 +88,7 @@ class MainWindow(QtWidgets.QMainWindow):
     self.ui.label_CONTAIN_SWAP_USED_GB.setText(f"{float(out['swap_used_kb']) / 1048576:.1f}".rstrip('0').rstrip('.')+"G")
 
     self.ui.label_CONTAIN_DISK_TOTAL_GB.setText(f"{float(out['disk_total_kb']) / 1048576:.1f}".rstrip('0').rstrip('.')+"G")
-    self.ui.label_CONTAIN_DISK_USED_GB.setText(f"{float(out['disk_used_kb']) / 1048576:.1f}".rstrip('z0').rstrip('.')+"G")
+    self.ui.label_CONTAIN_DISK_USED_GB.setText(f"{float(out['disk_used_kb']) / 1048576:.1f}".rstrip('0').rstrip('.')+"G")
     self.ui.label_CONTAIN_DISK_READ_MB_S.setText(f"{float(out['disk_read_kb_s']) / 1024:.1f}".rstrip('0').rstrip('.')+"M/s")
     self.ui.label_CONTAIN_DISK_WRITE_MB_S.setText(f"{float(out['disk_write_kb_s']) / 1024:.1f}".rstrip('0').rstrip('.')+"M/s")
 
