@@ -1,6 +1,6 @@
 # Maintainer: oversea-suite
 pkgname=guierm-git
-pkgver=r5.aa9820d
+pkgver=r2.04819ac
 pkgrel=1
 pkgdesc="GUI frontend for GERM (GEneral Resource Monitor)"
 arch=('any')
@@ -28,4 +28,6 @@ package() {
 #!/bin/sh
 exec python /usr/lib/guierm/guierm.py "$@"
 EOF
+
+    install -Dm644 guierm.desktop "$pkgdir/usr/share/applications/guierm.desktop"
 }
