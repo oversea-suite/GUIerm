@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=GUIerm
+Comment=GUI frontend for GERM (GEneral Resource Manager)
+Exec=/usr/bin/guierm
+Icon=utilities-system-monitor
+Terminal=false
+Categories=System;Monitor;
